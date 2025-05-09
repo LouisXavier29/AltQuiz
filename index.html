@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>ALT QUIZ</title>
@@ -11,287 +10,293 @@
       background-size: cover;
       color: #fff;
       text-align: center;
-    }
-    .screen { display: none; }
-    .active { display: block; }
-    .header {
-      background-color: #005f99;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 0;
-    }
-    .challenge-box {
-      background-color: #ffcc00;
-      color: #000;
-      border-radius: 20px;
-      padding: 20px;
-      width: 80%;
-      max-width: 500px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    .start-btn, button {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      border: none;
-      border-radius: 12px;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 10px rgba(0, 114, 255, 0.3);
-      margin: 10px;
-    }
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0, 114, 255, 0.4);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      width: 90%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .card {
-      background-color: #fff;
-      color: #000;
-      border-radius: 15px;
-      padding: 30px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card.blue { background-color: #4da6ff; color: #fff; }
-    .card.orange { background-color: #ff944d; color: #fff; }
-    .card.green { background-color: #66cc66; color: #fff; }
-    .time-limit, .difficulty-select {
-      margin-top: 30px;
-    }
-    input[type=number], input[type=text], select {
-      padding: 8px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
-    #quiz .question-box, #assignment .question-box {
-      font-size: 32px;
-      margin: 40px 0;
-    }
-    #timer {
-      font-size: 24px;
-      color: yellow;
-      margin: 20px;
-    }
+    }.screen {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.header {
+  background-color: #005f99;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.challenge-box {
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.start-btn, button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 114, 255, 0.3);
+  margin: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 114, 255, 0.4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  padding: 30px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.blue { background-color: #4da6ff; color: #fff; }
+.card.orange { background-color: #ff944d; color: #fff; }
+.card.green { background-color: #66cc66; color: #fff; }
+
+.time-limit, .difficulty-select {
+  margin-top: 30px;
+}
+
+input[type=number], input[type=text], select {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+#quiz .question-box, #assignment .question-box {
+  font-size: 32px;
+  margin: 40px 0;
+}
+
+#timer {
+  font-size: 24px;
+  color: yellow;
+  margin: 20px;
+}
+
   </style>
 </head>
-<body>
-<audio id="bgm" src="songq.mp3" autoplay loop></audio>
-<audio id="clickSound">
-  <source src="AltQuiz.mp3" type="audio/mpeg">
-  <source src="AltQuiz.ogg" type="audio/ogg">
-</audio>
-<audio id="correctSound" src="correct.mp3"></audio>
-<audio id="wrongSound" src="wrong.mp3"></audio>
+<body><audio id="bgm" src="songq.mp3" autoplay loop></audio> <audio id="clickSound" src="AltQuiz.mp3"></audio> <audio id="correctSound" src="correct.mp3"></audio> <audio id="wrongSound" src="wrong.mp3"></audio>
 
-<div class="screen active" id="menu">
-  <div class="header">ALT QUIZ Dashboard</div>
-  <div class="menu">
-    <div class="challenge-box">
-      <h2>Daily Challenge</h2>
-      <p>10 personalized questions per day</p>
-      <button onclick="startQuiz(1)">Start 1-Digit</button>
-    </div>
+  <div class="screen active" id="menu">
+    <div class="header">ALT QUIZ Dashboard</div><div class="menu">
+  <div class="challenge-box">
+    <h2>AltQuiz Multiplayer</h2>
+    <p>Coming maybe soon...</p>
+    <button onclick="startQuiz(1)">Start 1-Digit</button>
+  </div>
 
-    <div class="grid">
-      <div class="card blue" onclick="startQuiz(1)">1-Digit</div>
-      <div class="card orange" onclick="startQuiz(2)">2-Digits+</div>
-      <div class="card green" onclick="startAssignment()">Assignment</div>
-    </div>
+  <div class="grid">
+    <div class="card blue" onclick="startQuiz(1)">1-Digit</div>
+    <div class="card orange" onclick="startQuiz(2)">2-Digits+</div>
+    <div class="card green" onclick="startAssignment()">Assignment</div>
+  </div>
 
-    <div class="difficulty-select">
-      <label>Difficulty: </label>
-      <select id="difficulty">
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-      </select>
-    </div>
+  <div class="difficulty-select">
+    <label>Difficulty: </label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+  </div>
 
-    <div class="time-limit">
-      <label>Time Limit: </label>
-      <input type="number" id="time-limit" value="10" min="3" max="60">
-      <button onclick="setTimeLimit()">Set</button>
-    </div>
+  <div class="time-limit">
+    <label>Time Limit: </label>
+    <input type="number" id="time-limit" value="10" min="3" max="60">
+    <button onclick="setTimeLimit()">Set</button>
   </div>
 </div>
 
-<div class="screen" id="quiz">
-  <div class="header">ALT QUIZ: Question <span id="question-number">1</span></div>
-  <div class="question-box" id="question">Loading...</div>
-  <div id="timer">10</div>
-</div>
+  </div>  <div class="screen" id="quiz">
+    <div class="header">ALT QUIZ: Question <span id="question-number">1</span></div>
+    <div class="question-box" id="question">Loading...</div>
+    <div id="timer">10</div>
+  </div>  <div class="screen" id="assignment">
+    <div class="header">Assignment Mode: Question <span id="assignment-number">1</span></div>
+    <div class="question-box" id="assignment-question">Loading...</div>
+    <input type="text" id="assignment-answer" placeholder="Type your answer">
+    <button onclick="checkAnswer()">Submit</button>
+  </div>  <script>
+    let digitType = 1;
+    let questionCount = 0;
+    let timer;
+    let timeLeft = 10;
+    let currentAnswer = 0;
 
-<div class="screen" id="assignment">
-  <div class="header">Assignment Mode: Question <span id="assignment-number">1</span></div>
-  <div class="question-box" id="assignment-question">Loading...</div>
-  <input type="text" id="assignment-answer" placeholder="Type your answer">
-  <button onclick="checkAnswer()">Submit</button>
-</div>
+    function getDifficulty() {
+      return document.getElementById('difficulty').value;
+    }
 
-<script>
-let digitType = 1;
-let questionCount = 0;
-let timer;
-let timeLeft = 10;
-let currentAnswer = 0;
+    function getMultiplierRange() {
+      const difficulty = getDifficulty();
+      if (digitType === 1) {
+        if (difficulty === 'easy') return [1, 5];
+        if (difficulty === 'medium') return [6, 8];
+        return [9, 10];
+      } else {
+        if (difficulty === 'easy') return [11, 15];
+        if (difficulty === 'medium') return [16, 18];
+        return [19, 20];
+      }
+    }
 
-function getDifficulty() {
-  return document.getElementById('difficulty').value;
-}
+    function playClickSound() {
+      const sound = document.getElementById('clickSound');
+      sound.currentTime = 0;
+      sound.play();
+    }
 
-function getMultiplierRange() {
-  const difficulty = getDifficulty();
-  if (digitType === 1) {
-    if (difficulty === 'easy') return [1, 5];
-    if (difficulty === 'medium') return [6, 8];
-    return [9, 10];
-  } else {
-    if (difficulty === 'easy') return [11, 15];
-    if (difficulty === 'medium') return [16, 18];
-    return [19, 20];
-  }
-}
+    function playCorrectSound() {
+      document.getElementById('correctSound').play();
+    }
 
-function playClickSound() {
-  const sound = document.getElementById('clickSound');
-  sound.currentTime = 0;
-  sound.play().catch(err => console.warn("Click sound error:", err));
-}
+    function playWrongSound() {
+      document.getElementById('wrongSound').play();
+    }
 
-function playCorrectSound() {
-  document.getElementById('correctSound').play();
-}
+    function setTimeLimit() {
+      const input = document.getElementById('time-limit').value;
+      const value = parseInt(input);
+      if (!isNaN(value) && value >= 3 && value <= 60) {
+        timeLeft = value;
+        alert("Time limit set to " + value + " seconds.");
+      } else {
+        alert("Enter a number between 3 and 60.");
+      }
+    }
 
-function playWrongSound() {
-  document.getElementById('wrongSound').play();
-}
-
-function setTimeLimit() {
-  const input = document.getElementById('time-limit').value;
-  const value = parseInt(input);
-  if (!isNaN(value) && value >= 3 && value <= 60) {
-    timeLeft = value;
-    alert("Time limit set to " + value + " seconds.");
-  } else {
-    alert("Enter a number between 3 and 60.");
-  }
-}
-
-function startQuiz(type) {
-  playClickSound();
-  digitType = type;
-  questionCount = 0;
-  document.getElementById('menu').classList.remove('active');
-  document.getElementById('quiz').classList.add('active');
-  nextQuestion();
-}
-
-function generateNumber() {
-  return digitType === 1
-    ? Math.floor(Math.random() * 9) + 1
-    : Math.floor(Math.random() * 10) + 11;
-}
-
-function generateQuestion() {
-  const a = generateNumber();
-  const [minB, maxB] = getMultiplierRange();
-  const b = Math.floor(Math.random() * (maxB - minB + 1)) + minB;
-  const op = Math.random() < 0.5 ? 'x' : ':';
-  const question = op === 'x' ? `${a} x ${b}` : `${a * b} : ${b}`;
-  return question;
-}
-
-function nextQuestion() {
-  questionCount++;
-  document.getElementById('question-number').textContent = questionCount;
-  document.getElementById('question').textContent = generateQuestion();
-  resetTimer();
-}
-
-function resetTimer() {
-  clearInterval(timer);
-  let countdown = timeLeft;
-  document.getElementById('timer').textContent = countdown;
-  timer = setInterval(() => {
-    countdown--;
-    document.getElementById('timer').textContent = countdown;
-    if (countdown <= 0) {
-      clearInterval(timer);
+    function startQuiz(type) {
+      playClickSound();
+      digitType = type;
+      questionCount = 0;
+      document.getElementById('menu').classList.remove('active');
+      document.getElementById('quiz').classList.add('active');
       nextQuestion();
     }
-  }, 1000);
-}
 
-function startAssignment() {
-  playClickSound();
-  questionCount = 0;
-  document.getElementById('menu').classList.remove('active');
-  document.getElementById('assignment').classList.add('active');
-  nextAssignment();
-}
+    function generateNumber() {
+      return digitType === 1
+        ? Math.floor(Math.random() * 9) + 1
+        : Math.floor(Math.random() * 10) + 11;
+    }
 
-function nextAssignment() {
-  if (questionCount >= 10) {
-    alert("Assignment complete!");
-    location.reload();
-    return;
-  }
-  questionCount++;
-  const a = Math.floor(Math.random() * 12) + 1;
-  const b = Math.floor(Math.random() * 12) + 1;
-  if (Math.random() < 0.5) {
-    currentAnswer = a * b;
-    document.getElementById('assignment-question').textContent = `${a} x ${b}`;
-  } else {
-    currentAnswer = a;
-    document.getElementById('assignment-question').textContent = `${a * b} : ${b}`;
-  }
-  document.getElementById('assignment-number').textContent = questionCount;
-  document.getElementById('assignment-answer').value = '';
-}
+    function generateQuestion() {
+      const a = generateNumber();
+      const [minB, maxB] = getMultiplierRange();
+      const b = Math.floor(Math.random() * (maxB - minB + 1)) + minB;
+      const op = Math.random() < 0.5 ? 'x' : ':';
+      const question = op === 'x' ? `${a} x ${b}` : `${a * b} : ${b}`;
+      return question;
+    }
 
-function checkAnswer() {
-  const userAnswer = parseInt(document.getElementById('assignment-answer').value);
-  if (userAnswer === currentAnswer) {
-    playCorrectSound();
-    nextAssignment();
-  } else {
-    playWrongSound();
-    alert("Try again!");
-  }
-}
+    function nextQuestion() {
+      questionCount++;
+      document.getElementById('question-number').textContent = questionCount;
+      document.getElementById('question').textContent = generateQuestion();
+      resetTimer();
+    }
 
-window.addEventListener('DOMContentLoaded', () => {
-  const audio = document.getElementById('bgm');
-  audio.muted = false;
-  audio.play().catch(() => {
-    document.addEventListener('click', () => {
-      audio.play();
-    }, { once: true });
-  });
-});
-</script>
-</body>
+    function resetTimer() {
+      clearInterval(timer);
+      let countdown = timeLeft;
+      document.getElementById('timer').textContent = countdown;
+      timer = setInterval(() => {
+        countdown--;
+        document.getElementById('timer').textContent = countdown;
+        if (countdown <= 0) {
+          clearInterval(timer);
+          nextQuestion();
+        }
+      }, 1000);
+    }
+
+    function startAssignment() {
+      playClickSound();
+      questionCount = 0;
+      document.getElementById('menu').classList.remove('active');
+      document.getElementById('assignment').classList.add('active');
+      nextAssignment();
+    }
+
+    function nextAssignment() {
+      if (questionCount >= 10) {
+        alert("Assignment complete!");
+        location.reload();
+        return;
+      }
+      questionCount++;
+      const a = Math.floor(Math.random() * 12) + 1;
+      const b = Math.floor(Math.random() * 12) + 1;
+      if (Math.random() < 0.5) {
+        currentAnswer = a * b;
+        document.getElementById('assignment-question').textContent = `${a} x ${b}`;
+      } else {
+        currentAnswer = a;
+        document.getElementById('assignment-question').textContent = `${a * b} : ${b}`;
+      }
+      document.getElementById('assignment-number').textContent = questionCount;
+      document.getElementById('assignment-answer').value = '';
+    }
+
+    function checkAnswer() {
+      const userAnswer = parseInt(document.getElementById('assignment-answer').value);
+      if (userAnswer === currentAnswer) {
+        playCorrectSound();
+        nextAssignment();
+      } else {
+        playWrongSound();
+        alert("Try again!");
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bgm');
+      audio.muted = false;
+      audio.play().catch(() => {
+        document.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    });
+  </script></body>
 </html>
